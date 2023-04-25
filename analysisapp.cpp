@@ -31,14 +31,14 @@ int main() {
 
     for (char c : cipher_text) {
         if (check_alphabets(c)) {
-            letter_count[tolower(c) - 'a']++;
+            letter_count[toupper(c) - 'A']++;
         }
     }
 
     cout<<"Analysis:"<<endl;
 
     for (int i = 0; i < alphabet_size; i++) {
-        char letter = 'a' + i;
+        char letter = 'A' + i;
         if (letter_count[i] > 0) {
             cout << letter << "->" << letter_count[i] << ",";
         }
